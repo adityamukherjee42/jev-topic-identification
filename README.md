@@ -1,8 +1,6 @@
 # Jev Topic Identification
 
-Testing [TypeSafe's Jev](https://docs.typesafe.ai) (a System One model) on topic-identification:
-given a two-person conversation transcript, does it discuss a given topic? Each dataset pairs
-transcripts with ground-truth topic labels so accuracy can be measured directly.
+Testing [TypeSafe's Jev](https://docs.typesafe.ai) (a System One model) on topic-identification.
 
 ## Setup
 
@@ -23,8 +21,7 @@ TYPESAFE_API_KEY=your_key_here
 .venv/bin/python main.py [path/to/dataset.json]
 ```
 
-Defaults to `dataset/life_insurance_transcripts.json` if no path is given. Each run prints a
-per-topic accuracy report and mismatch list, and logs the run to MLflow under the
+Each run prints a per-topic accuracy report and mismatch list, and logs the run to MLflow under the
 `jev-topic-detection` experiment (metrics, the dataset used, and mismatches as artifacts).
 
 To compare runs:
@@ -37,19 +34,15 @@ To compare runs:
 
 - `main.py` — entry point: loads a dataset, runs it through Jev, prints the report, logs to MLflow.
 - `helpers.py` — dataset loading, question building (Noul primitive), evaluation, and MLflow logging.
-- `dataset/life_insurance_transcripts.json` — 12 synthetic agent/customer life-insurance calls,
-  hand-labeled across 10 topics (benefits, premium, riders, beneficiaries, underwriting,
-  exclusions, claims, cancellation, payment).
-- `dataset/medical_topic_transcripts*.json` — 12 real doctor/patient dialogues sampled from
+- `medical_topic_transcripts*.json` — 12 real doctor/patient dialogues sampled from
   [MTS-Dialog](https://github.com/abachaa/MTS-Dialog), labeled across 12 clinical-note topics
   (chief complaint, history of present illness, past medical/surgical history, etc.). Three
   variants show the effect of tuning the topic instructions:
-  - `medical_topic_transcripts.json` — baseline wording ("Discussed X").
-  - `medical_topic_transcripts_primary_focus.json` — reworded to ask whether X was the
-    conversation's primary focus, not just mentioned in passing.
-  - `medical_topic_transcripts_criteria.json` — adds explicit Noul `criteria` (true/false
-    boundary descriptions) for the three topics that stayed ambiguous after the wording change.
-- `dataset/raw/` — the original MTS-Dialog CSV the medical transcripts were sampled from.
+- `medical_topic_transcripts.json` — baseline wording ("Discussed X").
+- `medical_topic_transcripts_primary_focus.json` — reworded to ask whether X was the
+  conversation's primary focus, not just mentioned in passing.
+- `medical_topic_transcripts_criteria.json` — adds explicit Noul `criteria` (true/false
+  boundary descriptions) for the three topics that stayed ambiguous after the wording change.
 
 ## Dataset format
 
@@ -76,7 +69,6 @@ when the yes/no boundary needs disambiguating.
 
 | Dataset | Overall accuracy |
 |---|---|
-| `life_insurance_transcripts.json` | 95.8% |
 | `medical_topic_transcripts.json` (baseline) | 81.9% |
 | `medical_topic_transcripts_primary_focus.json` | 86.8% |
 | `medical_topic_transcripts_criteria.json` | 90.3% |
