@@ -1,0 +1,258 @@
+{
+  "topics": {
+    "chief_complaint": "focus primarily on the patient's chief complaint or main reason for the visit, rather than mention it only in passing",
+    "history_present_illness": "focus primarily on the history of the patient's current/present illness or symptoms, rather than mention it only in passing",
+    "past_medical_history": "focus primarily on reviewing the patient's past medical history or existing chronic conditions, rather than mention it only in passing",
+    "past_surgical_history": "focus primarily on reviewing the patient's past surgeries or surgical history, rather than mention it only in passing",
+    "family_social_history": "focus primarily on family medical history or social history (smoking, alcohol, occupation, living situation), rather than mention it only in passing",
+    "allergies": "focus primarily on the patient's allergies or allergic reactions, rather than mention it only in passing",
+    "medications": "focus primarily on reviewing medications the patient is currently taking, rather than mention them only in passing",
+    "review_of_systems": "focus primarily on a body-system-by-body-system review of systems, rather than mention a single symptom only in passing",
+    "assessment": "focus primarily on the doctor delivering an assessment, diagnosis, or clinical impression, rather than mention it only in passing",
+    "physical_exam": "focus primarily on the doctor performing and describing a physical examination, rather than mention it only in passing",
+    "treatment_plan": "focus primarily on laying out the treatment plan or next steps/orders, rather than mention it only in passing",
+    "disposition": "focus primarily on discharge or disposition instructions, rather than mention it only in passing"
+  },
+  "transcripts": [
+    {
+      "id": "m01",
+      "title": "Chief complaint visit",
+      "source": "MTS-Dialog TrainingSet row 17 (section_header=CC)",
+      "transcript": "Doctor: When did the nausea and vomiting start?\nPatient: About a few hours ago. I can't seem to stomach anything.\nDoctor: How many episodes of vomiting have you had?\nPatient: At least four.\nDoctor: Any abdominal pain, fever, chill, or other symptoms?\nPatient: Just nausea and vomiting. It's been so terrible.\nDoctor: I'll order you some Zofran to help bring the nausea to bay. One moment while I put the order in.",
+      "topics": {
+        "chief_complaint": true,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m02",
+      "title": "Blood pressure med refill",
+      "source": "MTS-Dialog TrainingSet row 0 (section_header=GENHX)",
+      "transcript": "Doctor: What brings you back into the clinic today, miss?\nPatient: I came in for a refill of my blood pressure medicine.\nDoctor: It looks like Doctor Kumar followed up with you last time regarding your hypertension, osteoarthritis, osteoporosis, hypothyroidism, allergic rhinitis and kidney stones.  Have you noticed any changes or do you have any concerns regarding these issues?\nPatient: No.\nDoctor: Have you had any fever or chills, cough, congestion, nausea, vomiting, chest pain, chest pressure?\nPatient: No.\nDoctor: Great. Also, for our records, how old are you and what race do you identify yourself as?\nPatient: I am seventy six years old and identify as a white female.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": true,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m03",
+      "title": "Asthma follow-up",
+      "source": "MTS-Dialog TrainingSet row 5 (section_header=PASTMEDICALHX)",
+      "transcript": "Doctor: How's your asthma since you started using your inhaler again?\nPatient: Much better. I don't know why I didn't take it with me everywhere I went.\nDoctor: It's important to carry it with you, especially during times where you're exercising or walking more than usual.\nPatient: Yeah. I think I've learned my lesson.\nDoctor: Besides asthma, do you have any other medical problems?",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": true,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m04",
+      "title": "Cardiac surgical history",
+      "source": "MTS-Dialog TrainingSet row 63 (section_header=PASTSURGICAL)",
+      "transcript": "Doctor: It looks like you have an extensive medical history.\nPatient: I blame my heart. It's caused me the most trouble. I had coronary artery bypass surgery in twenty ten along with an angioplasty.\nDoctor: I'm sorry that your heart has been giving you so much trouble. I'm happy that you're here with us today and taking the right measures to keep yourself healthy.\nPatient: Oh, and I forgot to mention that I've had prostate biopsies in the past.\nDoctor: When did you have the biopsies done?\nPatient: Last year.\nDoctor: Did they come back negative?\nPatient: Yes, fortunately. I guess my prostate isn't as troublesome as my heart.\nDoctor: I understand.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": true,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m05",
+      "title": "Family history intake",
+      "source": "MTS-Dialog TrainingSet row 8 (section_header=FAM/SOCHX)",
+      "transcript": "Doctor: Hi there, sir! How are you today?\nPatient: Hello! I am good.\nDoctor: I would like to start with your family medical history today. What do you know about their medical history?\nPatient: My mother and father both had heart disease. Well, my mother had complication from her heart disease and that is how she passed.  My father was only in his forty's when he died.\nDoctor: I am so sorry the hear that.\nPatient: Thank you. I have two brothers, one whom I don't speak to very much anymore. I don't know if he has any health problems. My other brother is healthy with no issues. Both my uncles on my mother's side had polio, I think.\nDoctor: Tell me more about your uncles with polio. They both had polio?\nPatient: One of them had to wear crutches due to how bad his leg deformans were and then the other had leg deformities in only one leg.  I am fairly certain that they had polio.\nDoctor: Do you know of any other family member with neurological conditions?\nPatient: No. None that I know of.\nDoctor: Do you have any children?\nPatient: Yes. I have one child.\nDoctor: Is your child healthy and well?\nPatient: Yes.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": true,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m06",
+      "title": "Medication allergy check",
+      "source": "MTS-Dialog TrainingSet row 317 (section_header=ALLERGY)",
+      "transcript": "Doctor: Any allergies?\nPatient: Um yeah. I'm trying to remember the name. It's a pain killer that starts with an L. Oh Lortab.\nDoctor: What happens when you take Lortab?\nPatient: Really bad hives. I've only ever taken it once.\nDoctor: I'll make note of that in your chart so we have it in your records.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": true,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m07",
+      "title": "Current medications review",
+      "source": "MTS-Dialog TrainingSet row 3 (section_header=MEDICATIONS)",
+      "transcript": "Doctor: Are you taking any over the counter medicines?\nPatient: No, only the ones which were prescribed.\nDoctor: No alternative medicine, naturopathy or anything?\nPatient: No, only whatever is here in this prescription.\nDoctor: Okay let me take a look...so you were prescribed Salmeterol inhaler-\nPatient: On as needed basis.\nDoctor: Okay and the other one is Fluticasone inhaler, which is-\nPatient: Which is a nasal inhaler.\nDoctor: Right.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": true,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m08",
+      "title": "Review of systems check-in",
+      "source": "MTS-Dialog TrainingSet row 34 (section_header=ROS)",
+      "transcript": "Doctor: Have you lost weight?\nPatient: No, I haven't, you can ask my daughter.\nDoctor: How about anything like fever, nausea, vomiting, pain?\nPatient: No.\nDoctor: And as we discussed you have problem talking and comprehending.\nPatient: Yes.\nDoctor: And you get urine infections too?\nPatient: Yes.\nDoctor: And as discussed, your drainage is similar to past episodes when you had such infection?\nPatient: Yes.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": true,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m09",
+      "title": "Kidney stone diagnosis",
+      "source": "MTS-Dialog TrainingSet row 103 (section_header=ASSESSMENT)",
+      "transcript": "Doctor: Hi there! I have the results from your ultrasound. You have kidney stones in the ureter close to the bladder.\nPatient: Oh no.\nDoctor: This explains the pain you have been having on your left side. Are you still experiencing nausea and vomiting?\nPatient: Yes, I have been.\nDoctor: I would like to set you up with a consult with a consult with a surgeon.\nPatient: Okay.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": true,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m10",
+      "title": "Physical exam visit",
+      "source": "MTS-Dialog TrainingSet row 67 (section_header=EXAM)",
+      "transcript": "Doctor: I will do a quick exam on you.\nPatient: What kind of exam?\nDoctor: I'm just checking for lymph nodes. Whenever there is an infection those guys are the first ones to be noticed with swelling.\nDoctor: Okay, so let's first check your neck area. It looks good. I don't feel any inflamed lymph node. Your armpits look good too and the last place to check is your groin area. It is all good. No sign of infection.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": true,
+        "treatment_plan": false,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m11",
+      "title": "Lab follow-up plan",
+      "source": "MTS-Dialog TrainingSet row 248 (section_header=PLAN)",
+      "transcript": "Doctor: So, you saw Doctor X?\nPatient: Yes, seven days back. I went to get my blood work done and then I followed up with Doctor Y.\nDoctor: Yes, I will look at C B C diff and C M P profile.\nPatient: I will follow up with my oncologist, Doctor Z, for my swellings.\nDoctor: Yeah, I couldn't get hold of Doctor Z but here is the phone number. You should book the appointment.\nPatient: Okay I will do that.\nDoctor: Also, I would like to follow up with your endocrinologist that is Doctor A for adjustments that is needed in your insulin pump.\nPatient: And you want me to see my gastro doc too?\nDoctor: Yes, please follow up with Doctor B for issues with your J tube.\nPatient: Sure thing.\nDoctor: Lastly, I want you to see Doctor Y if your condition changes regarding colon cancer.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": true,
+        "disposition": false
+      }
+    },
+    {
+      "id": "m12",
+      "title": "Hospital discharge update",
+      "source": "MTS-Dialog TrainingSet row 696 (section_header=DISPOSITION)",
+      "transcript": "Doctor: Your condition and all your vital signs look stable to me right now. You must be very careful as your condition can get poor or it might improve as well.\nPatient: Okay, so what do you recommend?\nDoctor: Do you have any support system? Is there anyone at home to take care of you?\nPatient: Yes, my son and his family lives with me. They are very caring.\nDoctor: That is good. Do take care of yourself and let me know if your condition worsens.",
+      "topics": {
+        "chief_complaint": false,
+        "history_present_illness": false,
+        "past_medical_history": false,
+        "past_surgical_history": false,
+        "family_social_history": false,
+        "allergies": false,
+        "medications": false,
+        "review_of_systems": false,
+        "assessment": false,
+        "physical_exam": false,
+        "treatment_plan": false,
+        "disposition": true
+      }
+    }
+  ]
+}
